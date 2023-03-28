@@ -1,0 +1,125 @@
+{
+    "resource": "/twilio-message",
+    "path": "/twilio-message",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-ASN": "14618",
+        "CloudFront-Viewer-Country": "US",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "ngfek65mk3.execute-api.us-east-2.amazonaws.com",
+        "I-Twilio-Idempotency-Token": "e3bd177d-cd34-464b-b81f-d1ad2fb52cf6",
+        "User-Agent": "TwilioProxy/1.1",
+        "Via": "1.1 db50275fc6a3d1f557e22016322e2ba2.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "ek_p_JKqOTaZnvEw0ojkh1kHTccb4tWrvsjZDkhD_kGuuCrzUjGHww==",
+        "X-Amzn-Trace-Id": "Root=1-64226560-13782e9b7cdded18502ac508",
+        "X-Forwarded-For": "44.201.171.130, 15.158.50.107",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "X-Home-Region": "us1",
+        "X-Twilio-Signature": "RRqBoki8sfDEHrktP+hVlC0D9MY="
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-ASN": [
+            "14618"
+        ],
+        "CloudFront-Viewer-Country": [
+            "US"
+        ],
+        "Content-Type": [
+            "application/x-www-form-urlencoded"
+        ],
+        "Host": [
+            "ngfek65mk3.execute-api.us-east-2.amazonaws.com"
+        ],
+        "I-Twilio-Idempotency-Token": [
+            "e3bd177d-cd34-464b-b81f-d1ad2fb52cf6"
+        ],
+        "User-Agent": [
+            "TwilioProxy/1.1"
+        ],
+        "Via": [
+            "1.1 db50275fc6a3d1f557e22016322e2ba2.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "ek_p_JKqOTaZnvEw0ojkh1kHTccb4tWrvsjZDkhD_kGuuCrzUjGHww=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-64226560-13782e9b7cdded18502ac508"
+        ],
+        "X-Forwarded-For": [
+            "44.201.171.130, 15.158.50.107"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ],
+        "X-Home-Region": [
+            "us1"
+        ],
+        "X-Twilio-Signature": [
+            "RRqBoki8sfDEHrktP+hVlC0D9MY="
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "pu34nq",
+        "resourcePath": "/twilio-message",
+        "httpMethod": "POST",
+        "extendedRequestId": "CeTHFGkkCYcFsrA=",
+        "requestTime": "28/Mar/2023:03:56:16 +0000",
+        "path": "/Prod/twilio-message",
+        "accountId": "122228113502",
+        "protocol": "HTTP/1.1",
+        "stage": "Prod",
+        "domainPrefix": "ngfek65mk3",
+        "requestTimeEpoch": 1679975776211,
+        "requestId": "adef656a-4bba-4092-afdb-61a587103c5c",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "44.201.171.130",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "TwilioProxy/1.1",
+            "user": null
+        },
+        "domainName": "ngfek65mk3.execute-api.us-east-2.amazonaws.com",
+        "apiId": "ngfek65mk3"
+    },
+    "body": "SmsMessageSid=SM048ef437d9e3b236b581d8a69d163480&NumMedia=0&ProfileName=Marco+Mart%C3%ADnez&SmsSid=SM048ef437d9e3b236b581d8a69d163480&WaId=5214494382517&SmsStatus=received&Body=Hi&To=whatsapp%3A%2B14155238886&NumSegments=1&ReferralNumMedia=0&MessageSid=SM048ef437d9e3b236b581d8a69d163480&AccountSid=AC4892398135f0340a8f07f62920c938cb&From=whatsapp%3A%2B5214494382517&ApiVersion=2010-04-01",
+    "isBase64Encoded": false
+}

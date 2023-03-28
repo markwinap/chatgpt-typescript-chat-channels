@@ -1,0 +1,38 @@
+{
+  "name": "twilio_message",
+  "version": "1.0.0",
+  "description": "Twilio Message Handler",
+  "main": "app.js",
+  "repository": "https://github.com/markwinap/chatgpt-typescript-chat-channels",
+  "author": "Marco Martinez",
+  "license": "MIT",
+  "scripts": {
+    "unit": "jest",
+    "lint": "eslint '*.ts' --quiet --fix",
+    "compile": "tsc",
+    "test": "npm run compile && npm run unit"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.14",
+    "openai": "^3.2.1",
+    "twilio": "^4.9.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.114",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.10",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "jsdoc": "^4.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
