@@ -1,7 +1,6 @@
 # chatgpt-typescript-chat-channels
 ChatGPTm Typescript Chat Channels
 
-
 ## material-react
 TS React Js SPA using Material UI to create chat message bubbles and send the requests to OpenAI
 
