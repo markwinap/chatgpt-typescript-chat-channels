@@ -4,8 +4,14 @@ import dayjs from 'dayjs';
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import Scroll from 'react-scroll';
 import { TextInput } from "./TextInput";
 import { MessageLeft, MessageRight } from "./Message";
+
+const Element = Scroll.Element;
+const Events = Scroll.Events;
+const scrollSpy = Scroll.scrollSpy;
+const scroller = Scroll.scroller;
 
 const configuration = new Configuration({
   apiKey: process.env.REACT_APP_OPENAI_API_KEY,
@@ -55,15 +61,25 @@ function App() {
   useEffect(() => {
     console.log(process.env.REACT_APP_OPENAI_API_KEY)
     setMessages([
-{
-  message: 'Hi😀 I am a bot. I can answer your questions about the OpenAI.',
-  timestamp: dayjs().format('MM/DD HH:MM'),
-  photoURL: "https://icones.pro/wp-content/uploads/2022/10/robot-icon.png",
-  displayName: "Bot",
-  avatarDisp: true,
-  role: "left"
-}
+      {
+        message: 'Hi😀 I am a bot. I can answer your questions about the OpenAI.',
+        timestamp: dayjs().format('MM/DD HH:MM'),
+        photoURL: "https://icones.pro/wp-content/uploads/2022/10/robot-icon.png",
+        displayName: "OpenAI",
+        avatarDisp: true,
+        role: "left"
+      }
     ]);
+    Events.scrollEvent.register('begin', function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function () {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
   }, []);
 
   const handleSend = (message: string) => {
@@ -79,6 +95,7 @@ function App() {
     const _messages = [...messages, newMessage];
     setMessages(_messages);
     handleOpenAI(message, _messages);
+    scrollToBottom();
   };
 
   const handleOpenAI = async (message: string, messages: Message[]) => {
@@ -101,7 +118,7 @@ function App() {
         message: content,
         timestamp: dayjs().format('MM/DD HH:MM'),
         photoURL: "https://icones.pro/wp-content/uploads/2022/10/robot-icon.png",
-        displayName: "Bot",
+        displayName: "OpenAI",
         avatarDisp: true,
         role: "left"
       };
@@ -117,6 +134,17 @@ function App() {
     }
     setLoading(false);
     setMessages([...messages, newMessage]);
+    scrollToBottom();
+  };
+
+  const scrollToBottom = () => {
+    scroller.scrollTo('lastElement', {
+      duration: 1500,
+      delay: 100,
+      smooth: 'easeInOutQuint',
+      containerId: 'containerElement',
+      offset: 50
+    })
   };
 
   const props = {
@@ -130,10 +158,10 @@ function App() {
   return (
     <BoxContainer>
       <PaperContainer elevation={2}>
-        <PaperBody>
+        <PaperBody id="containerElement">
           {messages.map((message, index) => {
             const { message: msg, timestamp, photoURL, displayName, avatarDisp, role } = message;
-            if (message.role === "left") {
+            if (role === "left") {
               return (
                 <MessageLeft
                   key={index}
@@ -157,6 +185,7 @@ function App() {
               );
             }
           })}
+          <Element name="lastElement"></Element>
         </PaperBody>
         <TextInput {...props} />
       </PaperContainer>
